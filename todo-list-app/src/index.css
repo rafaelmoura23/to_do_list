@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("https://wallpapercave.com/wp/wp7242600.jpg");
+  background-image: url("https://wallpapercave.com/wp/wp5203256.png");
   font-family: cursive;
 }
 
@@ -9,13 +9,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
-  height: 500px;
+  width: 90%;
+  height: 90%;
   background-color: transparent;
   border: 2px solid rgba(178, 177, 177, 0.792);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  color: black;
+  color: rgb(0, 0, 0);
   border-radius: 10px;
   padding: 30px 40px;
 }
@@ -30,6 +30,21 @@ body {
 
 .imgAdicionar{
   cursor: pointer;
+  display: flex;
+}
+
+#adicionarTarefa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#adicionarTarefa input{
+  font-size: 17px;
+  border: none;
+  font-family: cursive;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 #excluidas{
@@ -51,7 +66,7 @@ body {
 
 .btnEditar{
   border: none;
-  background-color: aqua;
+  background-color: rgb(217, 0, 255);
   border-radius: 5px;
   box-shadow: 0px 0px 5px #000;
   font-size: 17px;
@@ -62,24 +77,25 @@ body {
 }
 
 .btnEditar:hover{
-  background-color: rgb(0, 192, 192);
+  background-color: rgb(255, 0, 217);
   box-shadow: 0px 0px 8px #000;
 }
 
 .btnExcluir{
-  border: none;
-  margin-left: 10px;
-  background-color: rgb(255, 68, 0);
-  color: white;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px #000;
-  font-size: 17px;
-  font-family: cursive;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
+  align-items: center;
 }
 
-.btnExcluir:hover{
-  background-color: rgb(201, 55, 2);
-  box-shadow: 0px 0px 8px #000;
+#align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#space{
+  margin-bottom: 10px;
 }
 

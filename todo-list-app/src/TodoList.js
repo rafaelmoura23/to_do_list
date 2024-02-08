@@ -111,14 +111,16 @@ function TodoList() {
         <div id='boxForms'>
             <h1>LISTA DE TAREFAS</h1>
 
+            <div id='adicionarTarefa'>
             <input
                 type="text"
-                placeholder="Digite uma nova tarefa"
+                placeholder="Insira uma nova tarefa"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
             />
 
             <img className='imgAdicionar' onClick={addTask} src={adicionar}/>
+            </div>
 
             
 
@@ -138,13 +140,14 @@ function TodoList() {
                                 </>
                             ) : (
                                 <>
+                                    <div id='align'>
+                                    <input type="checkbox" className='btnExcluir' onClick={() => deleteTask(task.id)}></input>
                                     
-                                    
+                                    <div id='space'>
                                     {task.description}
-                                    
+                                    </div>
                                     <button className='btnEditar' onClick={() => startEditingTask(task.id, task.description)}>Editar</button>
-                                    <button className='btnExcluir' onClick={() => deleteTask(task.id)}>Excluir</button>
-                                   
+                                    </div>
                                 </>
                             )}
                         </li>
