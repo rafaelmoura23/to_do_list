@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// Importa o React e a função 'useState' do módulo 'react'.
+import adicionar from "./img/botao-adicionar.png"
+// Importa o React e a função 'useState' do módulo 'react'
+
 function TodoList() {
     const [tasks, setTasks] = useState([]);
     const [deletedTasks, setDeletedTasks] = useState([]);
@@ -19,8 +21,8 @@ function TodoList() {
     };
 
     useEffect(() => {
-        getTasks(); // Chama a função getTasks ao montar o componente
-    }, []); // O segundo parâmetro vazio indica que o useEffect deve ser executado apenas uma vez, ao montar o componente
+        getTasks(); 
+    }, []); 
 
 
     // Adicionar as Tarefas
@@ -106,8 +108,8 @@ function TodoList() {
     };
 
     return (
-        <div>
-            <h1>Lista de Tarefas</h1>
+        <div id='boxForms'>
+            <h1>LISTA DE TAREFAS</h1>
 
             <input
                 type="text"
@@ -116,10 +118,11 @@ function TodoList() {
                 onChange={(e) => setNewTask(e.target.value)}
             />
 
-            <button onClick={addTask}></button>
-            <button onClick={updateTasks}>Atualizar Tarefas</button>
+            <img className='imgAdicionar' onClick={addTask} src={adicionar}/>
 
-            <div>
+            
+
+            <div id='pendentes'>
                 <h2>Tarefas Pendentes</h2>
                 <ul>
                     {tasks.map((task) => (
@@ -135,9 +138,13 @@ function TodoList() {
                                 </>
                             ) : (
                                 <>
+                                    
+                                    
                                     {task.description}
-                                    <button onClick={() => startEditingTask(task.id, task.description)}>Editar</button>
-                                    <button onClick={() => deleteTask(task.id)}>Excluir</button>
+                                    
+                                    <button className='btnEditar' onClick={() => startEditingTask(task.id, task.description)}>Editar</button>
+                                    <button className='btnExcluir' onClick={() => deleteTask(task.id)}>Excluir</button>
+                                   
                                 </>
                             )}
                         </li>
@@ -145,7 +152,7 @@ function TodoList() {
                 </ul>
             </div>
 
-            <div>
+            <div id='excluidas'>
                 <h2>Tarefas Excluídas</h2>
                 <ul>
                     {deletedTasks.map((deletedTask) => (

@@ -1,13 +1,85 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://wallpapercave.com/wp/wp7242600.jpg");
+  font-family: cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#boxForms{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 500px;
+  background-color: transparent;
+  border: 2px solid rgba(178, 177, 177, 0.792);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: black;
+  border-radius: 10px;
+  padding: 30px 40px;
 }
+
+#pendentes{
+  padding: 4px;
+  margin-top: 10px;
+  border-radius: 8px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.imgAdicionar{
+  cursor: pointer;
+}
+
+#excluidas{
+  padding: 4px;
+  margin-top: 10px;
+  border-radius: 8px;
+  list-style: none;
+  font-size: 20px;
+}
+
+#pendentes li{
+  list-style-type: none;
+}
+
+#excluidas li{
+  list-style-type: none
+}
+
+
+.btnEditar{
+  border: none;
+  background-color: aqua;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #000;
+  font-size: 17px;
+  font-family: cursive;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btnEditar:hover{
+  background-color: rgb(0, 192, 192);
+  box-shadow: 0px 0px 8px #000;
+}
+
+.btnExcluir{
+  border: none;
+  margin-left: 10px;
+  background-color: rgb(255, 68, 0);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #000;
+  font-size: 17px;
+  font-family: cursive;
+  cursor: pointer;
+}
+
+.btnExcluir:hover{
+  background-color: rgb(201, 55, 2);
+  box-shadow: 0px 0px 8px #000;
+}
+
