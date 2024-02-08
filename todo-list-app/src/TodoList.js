@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import adicionar from "./img/botao-adicionar.png"
-// import tarefasImg from "./img/tarefas.img"
+import tarefasImg from "./img/tarefas.png"
 // Importa o React e a função 'useState' do módulo 'react'
 
 function TodoList() {
@@ -110,9 +110,14 @@ function TodoList() {
 
     return (
         <div id='boxForms'>
+            <div id='title'>
             <h1>TO DO LIST </h1>
+            {/* <img className='img' src={tarefasImg}/> */}
+            </div>
+
 
             <div id='adicionarTarefa'>
+
             <input
                 type="text"
                 placeholder="Insira uma nova tarefa"
@@ -120,7 +125,7 @@ function TodoList() {
                 onChange={(e) => setNewTask(e.target.value)}
             />
 
-            <img className='imgAdicionar' onClick={addTask} src={adicionar}/>
+            <button onClick={addTask}> add New Task</button>
             </div>
 
             

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url("https://wallpapercave.com/wp/wp5203256.png");
+  background-image: url("https://wallpapercave.com/wp/wp7242600.jpg");
   font-family: cursive;
   background-repeat: none;
   background-attachment: fixed;
@@ -22,6 +22,12 @@ body {
   padding: 30px 40px;
 }
 
+#title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #pendentes{
   padding: 4px;
   margin-top: 10px;
@@ -37,8 +43,10 @@ body {
 
 #adicionarTarefa{
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #adicionarTarefa input{
@@ -47,6 +55,25 @@ body {
   font-family: cursive;
   border-radius: 5px;
   margin-right: 10px;
+  width: 300px;
+}
+
+#adicionarTarefa button{
+  border: none;
+  background-color: #0073ff;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  font-size: 16px;
+  font-family: cursive;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+  box-shadow: 0px 0px 5px #000;
+}
+
+#adicionarTarefa button:hover{
+  background-color: #0073ffdb;
+  color: #ffffff;
 }
 
 #excluidas{
