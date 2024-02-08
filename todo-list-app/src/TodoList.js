@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import adicionar from "./img/botao-adicionar.png"
+// import tarefasImg from "./img/tarefas.img"
 // Importa o React e a função 'useState' do módulo 'react'
 
 function TodoList() {
@@ -109,7 +110,7 @@ function TodoList() {
 
     return (
         <div id='boxForms'>
-            <h1>LISTA DE TAREFAS</h1>
+            <h1>TO DO LIST </h1>
 
             <div id='adicionarTarefa'>
             <input
@@ -142,10 +143,7 @@ function TodoList() {
                                 <>
                                     <div id='align'>
                                     <input type="checkbox" className='btnExcluir' onClick={() => deleteTask(task.id)}></input>
-                                    
-                                    <div id='space'>
                                     {task.description}
-                                    </div>
                                     <button className='btnEditar' onClick={() => startEditingTask(task.id, task.description)}>Editar</button>
                                     </div>
                                 </>
@@ -160,7 +158,9 @@ function TodoList() {
                 <ul>
                     {deletedTasks.map((deletedTask) => (
                         <li key={deletedTask.id} style={{ textDecoration: 'line-through' }}>
+                            <div id='align'>
                             {deletedTask.description}
+                            </div>
                         </li>
                     ))}
                 </ul>
