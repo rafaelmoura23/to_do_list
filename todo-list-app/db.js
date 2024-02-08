@@ -1,6 +1,7 @@
-const { Pool } = require('pg');
+const { Pool } = require('pg'); 
+// Classe utilizada para criar conexões com postgres
 
-// Conexão com o banco de dados
+// Conectando com o bancO de dados postgres
 const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
@@ -10,3 +11,4 @@ const pool = new Pool({
 });
 
 module.exports = pool;
+// Exportando os módulos para utilizar nos outros arq.

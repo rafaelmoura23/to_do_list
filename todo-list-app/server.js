@@ -22,8 +22,8 @@ app.post('/tasks', async (req, res) => {
     try {
       const { description } = req.body;
       await addTask(description);
-      const tasks = await getTasks();  // Após adicionar, obtemos a lista atualizada
-      res.json(tasks);  // Retornamos a lista atualizada como resposta
+      const tasks = await getTasks();  
+      res.json(tasks); 
     } catch (error) {
       console.error('Erro ao adicionar tarefa:', error);
       res.status(500).send('Erro interno do servidor');
@@ -46,8 +46,8 @@ app.delete('/tasks/:id', async (req, res) => {
     try {
       const { id } = req.params;
       await deleteTask(id);
-      const tasks = await getTasks();  // Obtemos a lista atualizada
-      res.json(tasks);  // Retornamos a lista atualizada como resposta
+      const tasks = await getTasks();  
+      res.json(tasks);
     } catch (error) {
       console.error('Erro ao excluir tarefa:', error);
       res.status(500).send('Erro interno do servidor');

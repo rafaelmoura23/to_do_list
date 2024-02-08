@@ -88,7 +88,6 @@ function TodoList() {
     // Atualizando as tarefas
     const saveEditedTask = async (taskId) => {
         try {
-            // Chame o backend para salvar a tarefa editada no banco de dados
             await fetch(`http://localhost:3001/tasks/${taskId}`, {
                 method: 'PUT',
                 headers: {
@@ -97,10 +96,8 @@ function TodoList() {
                 body: JSON.stringify({ description: editedTaskDescription }),
             });
 
-            // Atualize a lista de tarefas após a edição
             await getTasks();
 
-            // Limpe as variáveis de edição
             setEditingTaskId(null);
             setEditedTaskDescription('');
         } catch (error) {
